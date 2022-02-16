@@ -1,0 +1,5 @@
+groups:
+  - name: example
+    rules:
+      - alert: example
+        expr: vector(1)
