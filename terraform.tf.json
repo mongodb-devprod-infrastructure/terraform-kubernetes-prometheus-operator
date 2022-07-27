@@ -1,0 +1,9 @@
+{
+  "locals": {
+    "environment": "${terraform.workspace}"
+  },
+  "terraform": {
+    "required_providers": {},
+    "required_version": ">= 1.0"
+  }
+}
