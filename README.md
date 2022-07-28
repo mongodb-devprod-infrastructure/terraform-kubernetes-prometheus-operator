@@ -40,6 +40,7 @@ Please refer to the [CONTRIBUTING](docs/CONTRIBUTING.md) document for more infor
 
 [Apache License 2.0](LICENSE)
 
+<!-- prettier-ignore-start -->
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -68,3 +69,4 @@ No inputs.
 
 No outputs.
 <!-- END_TF_DOCS -->
+<!-- prettier-ignore-end -->

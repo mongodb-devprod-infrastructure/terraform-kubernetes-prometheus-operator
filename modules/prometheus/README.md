@@ -1,3 +1,4 @@
+<!-- prettier-ignore-start -->
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -41,3 +42,4 @@
 
 No outputs.
 <!-- END_TF_DOCS -->
+<!-- prettier-ignore-end -->
