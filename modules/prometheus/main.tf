@@ -43,9 +43,10 @@ resource "kubernetes_service_account" "this" {
   }
 }
 
-resource "kubernetes_cluster_role" "this" {
+resource "kubernetes_role" "this" {
   metadata {
-    name = "${local.name}-prometheus"
+    name      = "${local.name}-prometheus"
+    namespace = var.namespace
   }
 
   rule {
@@ -59,22 +60,18 @@ resource "kubernetes_cluster_role" "this" {
     resources  = ["ingresses"]
     verbs      = ["get", "list", "watch"]
   }
-
-  rule {
-    non_resource_urls = ["/metrics", "/metrics/cadvisor"]
-    verbs             = ["get"]
-  }
 }
 
-resource "kubernetes_cluster_role_binding" "this" {
+resource "kubernetes_role_binding" "this" {
   metadata {
-    name = "${local.name}-prometheus"
+    name      = "${local.name}-prometheus"
+    namespace = var.namespace
   }
 
   role_ref {
     api_group = "rbac.authorization.k8s.io"
-    kind      = "ClusterRole"
-    name      = kubernetes_cluster_role.this.metadata[0].name
+    kind      = "Role"
+    name      = kubernetes_role.this.metadata[0].name
   }
 
   subject {
