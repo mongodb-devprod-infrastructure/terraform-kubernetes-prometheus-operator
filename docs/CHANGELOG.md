@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.0.0...1.0.1) (2022-07-28)
+
+### Bug Fixes
+
+- role instead of cluster role for Prometheus ([be6acdd](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/commit/be6acdd6844e9dda9e406e665a50c5f871c12129))
+
 # 1.0.0 (2022-07-28)
 
 ### Features
