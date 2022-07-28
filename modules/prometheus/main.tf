@@ -152,4 +152,3 @@ resource "kubernetes_manifest" "servicemonitor" {
     }
   }
 }
-
