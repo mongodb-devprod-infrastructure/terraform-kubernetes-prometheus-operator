@@ -1,3 +1,9 @@
+# [1.1.0](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.0.1...1.1.0) (2022-07-29)
+
+### Features
+
+- service monitor for alertmanager ([5e213d7](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/commit/5e213d7280315f94d2e496991a91078160f54522))
+
 ## [1.0.1](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.0.0...1.0.1) (2022-07-28)
 
 ### Bug Fixes
