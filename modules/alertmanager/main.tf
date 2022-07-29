@@ -2,6 +2,10 @@ locals { name = "prometheus-operator" }
 
 resource "kubernetes_service" "this" {
   metadata {
+    labels = {
+      app     = "${local.name}-alertmanager"
+      release = local.name
+    }
     name      = "${local.name}-alertmanager"
     namespace = var.namespace
   }
@@ -60,6 +64,10 @@ resource "kubernetes_manifest" "servicemonitor" {
     apiVersion = "monitoring.coreos.com/v1"
     kind       = "ServiceMonitor"
     metadata = {
+      labels = {
+        app     = "${local.name}-alertmanager"
+        release = local.name
+      }
       name      = "${local.name}-alertmanager"
       namespace = var.namespace
     }
