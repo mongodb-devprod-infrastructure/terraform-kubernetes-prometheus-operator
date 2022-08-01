@@ -81,6 +81,21 @@ resource "kubernetes_role_binding" "this" {
   }
 }
 
+resource "kubernetes_secret" "this" {
+  metadata {
+    name      = "${local.name}-prometheus-scrape-confg"
+    namespace = var.namespace
+  }
+  data = {
+    "additional-scrape-configs.yaml" = <<-EOT
+- job_name: "prometheus"
+  static_configs:
+    - targets: ["localhost:9090"]
+EOT
+  }
+  type = "Opaque"
+}
+
 resource "kubernetes_manifest" "prometheus" {
   manifest = {
     apiVersion = "monitoring.coreos.com/v1"
@@ -94,6 +109,10 @@ resource "kubernetes_manifest" "prometheus" {
       namespace = var.namespace
     }
     spec = {
+      additionalScrapeConfigs = {
+        key  = "additional-scrape-configs.yaml"
+        name = kubernetes_secret.this.metadata[0].name
+      }
       alerting = {
         alertmanagers = [{
           name       = module.alertmanager.name

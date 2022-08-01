@@ -12,17 +12,20 @@ provider "kubernetes" {
   token                  = data.aws_eks_cluster_auth.this.token
 }
 
-resource "kubernetes_namespace" "this" {
-  count = 3
+resource "random_string" "this" {
+  length  = 5
+  special = false
+  upper   = false
+}
 
+resource "kubernetes_namespace" "this" {
   metadata {
-    name = "prometheus-operator-${count.index}"
+    name = "prometheus-operator-${random_string.this.result}"
   }
 }
 
 module "prometheus" {
-  for_each = toset(kubernetes_namespace.this[*].metadata[0].name)
-  source   = "../../modules/prometheus"
+  source = "../../modules/prometheus"
 
-  namespace = each.value
+  namespace = kubernetes_namespace.this.metadata[0].name
 }
