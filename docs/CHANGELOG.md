@@ -1,3 +1,9 @@
+# [1.2.0](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.1.0...1.2.0) (2022-08-01)
+
+### Features
+
+- secret for storing additional scrape configs ([b3832e9](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/commit/b3832e9a302e5186ac93bda8ad51f2f2bf0684c5))
+
 # [1.1.0](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.0.1...1.1.0) (2022-07-29)
 
 ### Features
