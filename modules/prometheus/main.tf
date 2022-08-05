@@ -87,13 +87,13 @@ resource "kubernetes_secret" "this" {
     namespace = var.namespace
   }
   data = {
-    "additional-scrape-configs.yaml" = <<-EOT
-- job_name: "prometheus"
-  static_configs:
-    - targets: ["localhost:9090"]
-EOT
+    "additional-scrape-configs.yaml" = yamlencode([])
   }
   type = "Opaque"
+
+  lifecycle {
+    ignore_changes = [data]
+  }
 }
 
 resource "kubernetes_manifest" "prometheus" {
