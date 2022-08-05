@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.2.0...1.2.1) (2022-08-05)
+
+### Bug Fixes
+
+- empty additional scrape configs ([290a348](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/commit/290a3485bde77daadd1346db8f2f84f399620253))
+
 # [1.2.0](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.1.0...1.2.0) (2022-08-01)
 
 ### Features
