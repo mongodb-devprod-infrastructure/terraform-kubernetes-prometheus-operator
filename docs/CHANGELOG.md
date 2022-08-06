@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.3.0...1.3.1) (2022-08-06)
+
+### Bug Fixes
+
+- implicit dependency order in example ([89c5986](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/commit/89c59861907b1a50ba85feeff0fb2ffb542934dc))
+
 # [1.3.0](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.2.1...1.3.0) (2022-08-06)
 
 ### Features
