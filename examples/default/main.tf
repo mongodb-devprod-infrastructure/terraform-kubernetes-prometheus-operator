@@ -41,7 +41,7 @@ module "prometheus" {
 resource "helm_release" "this" {
   chart      = "grafana"
   name       = "grafana"
-  namespace  = kubernetes_namespace.this.metadata[0].name
+  namespace  = module.prometheus.namespace
   repository = "https://grafana.github.io/helm-charts"
 
   set {
