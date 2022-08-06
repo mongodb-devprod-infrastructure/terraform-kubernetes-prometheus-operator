@@ -1,3 +1,9 @@
+# [1.3.0](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.2.1...1.3.0) (2022-08-06)
+
+### Features
+
+- configure Grafana Helm chart ([e2467d1](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/commit/e2467d1d57e394d09a40ec1c7690ce21be403752))
+
 ## [1.2.1](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.2.0...1.2.1) (2022-08-05)
 
 ### Bug Fixes
