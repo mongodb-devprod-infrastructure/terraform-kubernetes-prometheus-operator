@@ -41,6 +41,9 @@
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_name"></a> [name](#output\_name) | n/a |
+| <a name="output_namespace"></a> [namespace](#output\_namespace) | Namespace defines the space within which each name must be unique. |
 <!-- END_TF_DOCS -->
 <!-- prettier-ignore-end -->
