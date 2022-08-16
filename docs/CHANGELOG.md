@@ -1,3 +1,9 @@
+# [1.4.0](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.3.1...1.4.0) (2022-08-16)
+
+### Features
+
+- root module installs entire stack ([76f9f39](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/commit/76f9f39e70f31d793643256ea7808ce6da380ebe))
+
 ## [1.3.1](https://github.com/mongodb-devprod-infrastructure/terraform-kubernetes-prometheus-operator/compare/1.3.0...1.3.1) (2022-08-06)
 
 ### Bug Fixes
