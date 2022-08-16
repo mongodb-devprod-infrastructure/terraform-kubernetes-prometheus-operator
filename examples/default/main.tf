@@ -32,60 +32,8 @@ resource "kubernetes_namespace" "this" {
   }
 }
 
-module "prometheus" {
-  source = "../../modules/prometheus"
+module "operator" {
+  source = "../.."
 
   namespace = kubernetes_namespace.this.metadata[0].name
-}
-
-resource "helm_release" "this" {
-  chart      = "grafana"
-  name       = "grafana"
-  namespace  = module.prometheus.namespace
-  repository = "https://grafana.github.io/helm-charts"
-
-  set {
-    name  = "sidecar.dashboards.enabled"
-    value = true
-  }
-
-  set {
-    name  = "sidecar.datasources.enabled"
-    value = true
-  }
-
-  set {
-    name  = "sidecar.datasources.label"
-    value = "grafana_datasource"
-  }
-
-  set {
-    name  = "sidecar.datasources.labelValue"
-    value = "1"
-  }
-}
-
-resource "kubernetes_config_map" "this" {
-  data = {
-    "datasource.yaml" = yamlencode({
-      apiVersion = 1
-      datasources = [{
-        access    = "proxy"
-        isDefault = true
-        jsonData = {
-          timeInterval = "30s"
-        }
-        name = "Prometheus"
-        type = "prometheus"
-        url  = "http://${module.prometheus.name}.${module.prometheus.namespace}:9090/"
-      }]
-    })
-  }
-  metadata {
-    labels = {
-      grafana_datasource = "1"
-    }
-    name      = "prometheus"
-    namespace = helm_release.this.namespace
-  }
 }
