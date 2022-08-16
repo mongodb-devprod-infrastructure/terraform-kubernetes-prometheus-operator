@@ -15,7 +15,6 @@
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 4.23.0 |
-| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.6.0 |
 | <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | 2.12.1 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.3.2 |
 
@@ -23,14 +22,12 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_prometheus"></a> [prometheus](#module\_prometheus) | ../../modules/prometheus | n/a |
+| <a name="module_operator"></a> [operator](#module\_operator) | ../.. | n/a |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [helm_release.this](https://registry.terraform.io/providers/hashicorp/helm/2.6.0/docs/resources/release) | resource |
-| [kubernetes_config_map.this](https://registry.terraform.io/providers/hashicorp/kubernetes/2.12.1/docs/resources/config_map) | resource |
 | [kubernetes_namespace.this](https://registry.terraform.io/providers/hashicorp/kubernetes/2.12.1/docs/resources/namespace) | resource |
 | [random_string.this](https://registry.terraform.io/providers/hashicorp/random/3.3.2/docs/resources/string) | resource |
 | [aws_eks_cluster.this](https://registry.terraform.io/providers/hashicorp/aws/4.23.0/docs/data-sources/eks_cluster) | data source |

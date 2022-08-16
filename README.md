@@ -47,23 +47,33 @@ Please refer to the [CONTRIBUTING](docs/CONTRIBUTING.md) document for more infor
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_helm"></a> [helm](#requirement\_helm) | >= 2.6.0 |
 | <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | >= 2.12.1 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | >= 2.12.1 |
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_grafana"></a> [grafana](#module\_grafana) | ./modules/grafana | n/a |
+| <a name="module_prometheus"></a> [prometheus](#module\_prometheus) | ./modules/prometheus | n/a |
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [kubernetes_config_map.this](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/config_map) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace defines the space within which each name must be unique. | `string` | `"default"` | no |
 
 ## Outputs
 
